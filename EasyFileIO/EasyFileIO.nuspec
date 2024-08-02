@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>EasyFileIO</id>
+        <version>1.0.1</version>
+        <title>EasyFileIO</title>
+        <authors>Ronald Meeske</authors>
+        <description>A comprehensive C# library for file and directory operations.</description>
+        <tags>file io directory csv json encryption compression</tags>
+        <projectUrl>https://github.com/RonTheArson/EasyFileIO</projectUrl>
+        <license type="expression">MIT</license>
+        <readme>README.md</readme>
+        <dependencies>
+        <group targetFramework="net6.0">
+            <dependency id="Microsoft.Extensions.Logging" version="8.0.0" />
+            <dependency id="Microsoft.Extensions.Logging.Abstractions" version="8.0.1" />
+            <dependency id="Microsoft.Extensions.Logging.Console" version="8.0.0" />
+        </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\net6.0\EasyFileIO.dll" target="lib\net6.0" />
+        <file src="bin\Release\net6.0\EasyFileIO.xml" target="lib\net6.0" />
+        <file src="README.md" target="" />
+    </files>
+</package>

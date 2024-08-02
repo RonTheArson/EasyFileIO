@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <metadata>
-        <id>EasyFileIO</id>
-        <version>1.0.0</version>
-        <title>EasyFileIO</title>
-        <authors>Your Name</authors>
-        <description>A comprehensive C# library for file and directory operations.</description>
-        <tags>file io directory csv json encryption compression</tags>
-        <projectUrl>https://github.com/yourusername/EasyFileIO</projectUrl>
-        <license type="expression">MIT</license>
-    </metadata>
-    <files>
-        <file src="bin\Release\netstandard2.1\EasyFileIO.dll" target="lib\netstandard2.1" />
-        <file src="bin\Release\netstandard2.1\EasyFileIO.xml" target="lib\netstandard2.1" />
-    </files>
+	<metadata>
+		<id>EasyFileIO</id>
+		<version>1.0.0</version>
+		<title>EasyFileIO</title>
+		<authors>Ronald Meeske</authors>
+		<owners>Ronald Meeske</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<license type="expression">MIT</license>
+		<projectUrl>https://github.com/RonTheArson/EasyFileIO</projectUrl>
+		<description>A comprehensive C# library for file and directory operations.</description>
+		<tags>file io text read write</tags>
+		<dependencies>
+			<group targetFramework="net6.0">
+				<dependency id="Microsoft.Extensions.Logging" version="8.0.0" />
+				<dependency id="Microsoft.Extensions.Logging.Abstractions" version="8.0.1" />
+				<dependency id="Microsoft.Extensions.Logging.Console" version="8.0.0" />
+			</group>
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="bin\Release\net6.0\EasyFileIO.dll" target="lib\net6.0" />
+		<file src="bin\Release\net6.0\EasyFileIO.xml" target="lib\net6.0" />
+		<file src="readme.md" target="" />
+	</files>
 </package>
