@@ -10,7 +10,7 @@ namespace EasyFileIO.Tests
         // Test object class for JSON serialization/deserialization
         public class TestObject
         {
-            public string Name { get; set; }
+            public string? Name { get; set; }
             public int Value { get; set; }
         }
         private readonly string _testDirectory = Path.Combine(Path.GetTempPath(), "FileHandlerTests");

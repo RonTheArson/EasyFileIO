@@ -8,19 +8,42 @@ using Microsoft.Extensions.Logging;
 
 namespace EasyFileIO
 {
-
+    /// <summary>
+    /// Enum for common CSV delimiters
+    /// </summary>
     public enum CsvDelimiter
     {
+        /// <summary>
+        /// Comma delimiter (,)
+        /// </summary>
         Comma,
+
+        /// <summary>
+        /// Semicolon delimiter (;)
+        /// </summary>
         Semicolon,
+
+        /// <summary>
+        /// Tab delimiter (\t)
+        /// </summary>
         Tab
     }
-
+    /// <summary>
+    /// Provides methods for file and directory operations
+    /// </summary>
     public class FileHandler
     {
+        /// <summary>
+        /// Logger instance for logging errors and information
+        /// </summary>
         private static readonly ILogger _logger = LoggerFactory.Create(builder => builder.AddConsole()).CreateLogger<FileHandler>();
 
-
+        /// <summary>
+        /// Handles IO exceptions by throwing a new IOException with a formatted message
+        /// </summary>
+        /// <param name="operation">The name of the operation that caused the exception</param>
+        /// <param name="ex">The original exception that was caught</param>
+        /// <exception cref="IOException">Thrown with a formatted message including the operation name and original exception message</exception>
         private static void HandleIOException(string operation, Exception ex)
         {
             throw new IOException($"An error occurred while {operation}: {ex.Message}", ex);
@@ -496,7 +519,7 @@ namespace EasyFileIO
         /// <param name="inputFile">The path to the file to encrypt.</param>
         /// <param name="outputFile">The path to save the encrypted file.</param>
         /// <param name="password">The password to use for encryption.</param>
-        /// <exception cref="FileEncryptionException">Thrown when encryption fails.</exception>
+        /// <exception cref="IOException">Thrown when IO operation fails.</exception>
         public static void EncryptFile(string inputFile, string outputFile, string password)
         {
             try
